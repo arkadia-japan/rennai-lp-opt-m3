@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>ご登録ありがとうございます | THE ONLY ONE</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .thanks-container {
+            max-width: 800px;
+            width: 100%;
+            background: #fff;
+            border-radius: 16px;
+            padding: 64px 48px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .thanks-icon {
+            font-size: 80px;
+            margin-bottom: 32px;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        .thanks-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .thanks-message {
+            font-size: 18px;
+            color: #555;
+            line-height: 2;
+            margin-bottom: 40px;
+        }
+
+        .thanks-steps {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .thanks-steps-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .thanks-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding: 16px;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .thanks-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .step-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .thanks-note {
+            font-size: 14px;
+            color: #c22c0e;
+            font-weight: 500;
+            margin-bottom: 40px;
+            padding: 16px;
+            background: #fff5f5;
+            border-radius: 8px;
+            border-left: 4px solid #c22c0e;
+        }
+
+        .thanks-cta {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, #c22c0e 0%, #e63a1a 100%);
+            padding: 18px 48px;
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 6px 20px rgba(194, 44, 14, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .thanks-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(194, 44, 14, 0.4);
+        }
+
+        .thanks-footer {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .thanks-footer-text {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 16px;
+        }
+
+        .thanks-social {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .social-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            color: #555;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .thanks-container {
+                padding: 48px 32px;
+            }
+
+            .thanks-icon {
+                font-size: 64px;
+            }
+
+            .thanks-title {
+                font-size: 28px;
+            }
+
+            .thanks-message {
+                font-size: 16px;
+            }
+
+            .thanks-steps {
+                padding: 24px;
+            }
+
+            .thanks-steps-title {
+                font-size: 18px;
+            }
+
+            .thanks-step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step-number {
+                margin: 0 auto;
+            }
+
+            .thanks-cta {
+                font-size: 16px;
+                padding: 16px 40px;
+            }
+
+            .thanks-social {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 16px;
+            }
+
+            .thanks-container {
+                padding: 32px 24px;
+            }
+
+            .thanks-title {
+                font-size: 24px;
+            }
+
+            .thanks-steps {
+                padding: 20px;
+            }
+        }
+    </style>
+
+    <!-- Google Tag Manager / Analytics Placeholder -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    </script>
+
+    <!-- Meta Pixel Placeholder -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    </script>
+</head>
+<body data-gtm-id="GTM-XXXXXXX" data-fb-pixel-id="XXXXXXXXXX">
+    <div class="thanks-container">
+        <div class="thanks-icon">✨</div>
+        <h1 class="thanks-title">ご登録ありがとうございます！</h1>
+        <p class="thanks-message">
+            メールアドレスの登録が完了しました。<br>
+            まもなく、第1話の動画をお送りします。
+        </p>
+
+        <div class="thanks-steps">
+            <h2 class="thanks-steps-title">次のステップ</h2>
+
+            <div class="thanks-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">メールをご確認ください</div>
+                    <div class="step-description">
+                        数分以内に、ご登録いただいたメールアドレス宛に第1話の動画リンクをお送りします。
+                    </div>
+                </div>
+            </div>
+
+            <div class="thanks-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">迷惑メールフォルダをチェック</div>
+                    <div class="step-description">
+                        メールが届かない場合は、迷惑メールフォルダやプロモーションタブをご確認ください。
+                    </div>
+                </div>
+            </div>
+
+            <div class="thanks-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">動画を視聴して学習開始</div>
+                    <div class="step-description">
+                        届いたメール内のリンクから、第1話の動画をご視聴ください。7日間で恋愛を変える旅が始まります。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="thanks-note">
+            ※メールが届かない場合は、info@example.com までお問い合わせください。
+        </div>
+
+        <a href="index.html" class="thanks-cta">トップページに戻る</a>
+
+        <div class="thanks-footer">
+            <p class="thanks-footer-text">さらに情報をチェック</p>
+            <div class="thanks-social">
+                <a href="#" class="social-link">公式LINE</a>
+                <a href="#" class="social-link">公式Twitter</a>
+                <a href="#" class="social-link">公式Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize tracking
+        const gtmId = document.body.getAttribute('data-gtm-id');
+        const fbPixelId = document.body.getAttribute('data-fb-pixel-id');
+
+        if (gtmId && gtmId !== 'GTM-XXXXXXX') {
+            gtag('config', gtmId);
+        }
+
+        if (fbPixelId && fbPixelId !== 'XXXXXXXXXX') {
+            fbq('init', fbPixelId);
+            fbq('track', 'PageView');
+        }
+
+        // Track thank you page view (conversion confirmation)
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'ThankYouPage', {
+                event_category: 'conversion',
+                event_label: 'newsletter_signup_confirmed'
+            });
+        }
+
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'CompleteRegistration', {
+                content_name: 'Newsletter Signup',
+                status: 'completed'
+            });
+        }
+    </script>
+</body>
+</html>

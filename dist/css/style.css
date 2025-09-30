@@ -1,0 +1,854 @@
+/* ========================================
+   Reset & Base Styles
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #333;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ========================================
+   Container & Layout
+   ======================================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+/* ========================================
+   Hero Section
+   ======================================== */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(183, 159, 110, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(183, 159, 110, 0.08) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-target {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    color: #f5f5f5;
+    letter-spacing: 0.05em;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+.hero-title-sub {
+    font-size: 24px;
+    font-weight: 500;
+    color: #e8e8e8;
+    letter-spacing: 0.08em;
+}
+
+.hero-title-main {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+
+.hero-title-main-large {
+    font-size: 48px;
+    font-weight: 900;
+    color: #b79f6e;
+    letter-spacing: 0.08em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1.3;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 2;
+    margin-bottom: 48px;
+    color: #f0f0f0;
+}
+
+.hero-subtitle strong {
+    font-weight: 700;
+    color: #b79f6e;
+}
+
+.hero-lead {
+    margin-bottom: 48px;
+}
+
+.hero-lead-text {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.9;
+    color: #fff;
+}
+
+.hero-lead-text strong {
+    font-size: 28px;
+    font-weight: 700;
+    color: #b79f6e;
+}
+
+.hero-lead-highlight {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffd700;
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.2) 0%, rgba(183, 159, 110, 0.2) 100%);
+    padding: 8px 24px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+/* ========================================
+   CTA Buttons
+   ======================================== */
+
+.cta-container {
+    margin: 48px 0;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #c22c0e 0%, #e63a1a 100%);
+    padding: 24px 64px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 8px 24px rgba(194, 44, 14, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 0.08em;
+    text-align: center;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(194, 44, 14, 0.5);
+    background: linear-gradient(135deg, #d8330f 0%, #ff4520 100%);
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+}
+
+.cta-button-large {
+    font-size: 22px;
+    padding: 20px 56px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.cta-note {
+    font-size: 14px;
+    color: #f5f5f5;
+    margin-top: 16px;
+    font-weight: 400;
+}
+
+/* ========================================
+   Section Styles
+   ======================================== */
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: #1a3a52;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+}
+
+.section-description {
+    font-size: 18px;
+    text-align: center;
+    color: #555;
+    line-height: 2;
+    margin-bottom: 60px;
+}
+
+/* ========================================
+   Program Overview Section
+   ======================================== */
+
+.program-overview {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+/* ========================================
+   Curriculum Section
+   ======================================== */
+
+.curriculum {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.lesson-card {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.lesson-card:hover {
+    border-color: #b79f6e;
+    box-shadow: 0 6px 20px rgba(183, 159, 110, 0.15);
+    transform: translateY(-2px);
+}
+
+.lesson-header {
+    margin-bottom: 20px;
+}
+
+.lesson-number {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+    padding: 8px 24px;
+    border-radius: 24px;
+    letter-spacing: 0.05em;
+}
+
+.lesson-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a3a52;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    letter-spacing: 0.03em;
+}
+
+.lesson-points {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lesson-points li {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.9;
+    padding: 12px 0 12px 32px;
+    position: relative;
+}
+
+.lesson-points li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #b79f6e;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* ========================================
+   CTA Section 2
+   ======================================== */
+
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2d5a7b 0%, #1a3a52 100%);
+    text-align: center;
+}
+
+.cta-section-note {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffd700;
+    margin-bottom: 32px;
+    letter-spacing: 0.05em;
+}
+
+.cta-section .cta-note {
+    color: #f5f5f5;
+}
+
+/* ========================================
+   Profile Section
+   ======================================== */
+
+.profile {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.profile-card {
+    display: flex;
+    gap: 48px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 48px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-image {
+    flex-shrink: 0;
+    width: 200px;
+}
+
+.profile-image-placeholder {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a3a52;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.profile-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 2;
+}
+
+.profile-description p {
+    margin-bottom: 16px;
+}
+
+.profile-achievements {
+    list-style: none;
+    padding-left: 0;
+    margin: 24px 0;
+}
+
+.profile-achievements li {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.9;
+    padding: 8px 0;
+}
+
+.profile-mission {
+    font-weight: 500;
+    color: #1a3a52;
+    margin-top: 24px;
+}
+
+/* ========================================
+   Form Section
+   ======================================== */
+
+.form-section {
+    padding: 100px 0 120px;
+    background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+}
+
+.form-section .section-title {
+    color: #fff;
+}
+
+.form-description {
+    text-align: center;
+    font-size: 18px;
+    color: #f0f0f0;
+    margin-bottom: 48px;
+}
+
+.subscription-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 32px;
+}
+
+.form-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.required {
+    color: #c22c0e;
+    margin-left: 4px;
+}
+
+.form-input {
+    width: 100%;
+    font-size: 16px;
+    padding: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #b79f6e;
+    box-shadow: 0 0 0 3px rgba(183, 159, 110, 0.1);
+}
+
+.form-input.error {
+    border-color: #c22c0e;
+}
+
+.form-error {
+    font-size: 14px;
+    color: #c22c0e;
+    margin-top: 8px;
+    display: none;
+}
+
+.form-error:not(:empty) {
+    display: block;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    margin-top: 4px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+    cursor: pointer;
+}
+
+.privacy-link {
+    color: #0789c7;
+    text-decoration: underline;
+}
+
+.privacy-link:hover {
+    color: #056a9f;
+}
+
+.form-actions {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.footer {
+    padding: 48px 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.footer-link {
+    font-size: 14px;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #b79f6e;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    color: #888;
+}
+
+/* ========================================
+   Fixed Footer CTA
+   ======================================== */
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+    padding: 16px 0;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+.fixed-footer.visible {
+    display: block;
+}
+
+.fixed-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fixed-footer-timer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.timer-label {
+    font-size: 12px;
+    color: #f0f0f0;
+}
+
+.timer-display {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffd700;
+    font-family: 'Courier New', monospace;
+}
+
+.cta-button-fixed {
+    font-size: 18px;
+    padding: 14px 40px;
+}
+
+.fixed-footer-note {
+    text-align: center;
+    font-size: 11px;
+    color: #ccc;
+    margin-top: 8px;
+}
+
+/* ========================================
+   Responsive Styles
+   ======================================== */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .hero-target {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .hero-title-sub {
+        font-size: 18px;
+    }
+
+    .hero-title-main {
+        font-size: 24px;
+    }
+
+    .hero-title-main-large {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .hero-lead-text {
+        font-size: 18px;
+    }
+
+    .hero-lead-text strong {
+        font-size: 22px;
+    }
+
+    .hero-lead-highlight {
+        font-size: 19px;
+        padding: 6px 16px;
+    }
+
+    .cta-button {
+        font-size: 18px;
+        padding: 18px 40px;
+    }
+
+    .cta-button-large {
+        font-size: 18px;
+        padding: 18px 40px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    .section-description {
+        font-size: 16px;
+        margin-bottom: 48px;
+    }
+
+    .program-overview {
+        padding: 60px 0;
+    }
+
+    .curriculum {
+        padding: 60px 0;
+    }
+
+    .lesson-card {
+        padding: 28px;
+        margin-bottom: 24px;
+    }
+
+    .lesson-title {
+        font-size: 20px;
+    }
+
+    .lesson-points li {
+        font-size: 15px;
+    }
+
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .cta-section-note {
+        font-size: 18px;
+    }
+
+    .profile {
+        padding: 60px 0;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        padding: 32px;
+        gap: 32px;
+    }
+
+    .profile-image {
+        margin: 0 auto;
+    }
+
+    .profile-name {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .form-section {
+        padding: 60px 0 100px;
+    }
+
+    .subscription-form {
+        padding: 32px 20px;
+    }
+
+    .fixed-footer-content {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .cta-button-fixed {
+        font-size: 16px;
+        padding: 12px 32px;
+        width: 100%;
+    }
+
+    .timer-display {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title-main-large {
+        font-size: 28px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 16px 32px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .lesson-card {
+        padding: 20px;
+    }
+
+    .lesson-title {
+        font-size: 18px;
+    }
+
+    .subscription-form {
+        padding: 24px 16px;
+    }
+}
+
+/* ========================================
+   Accessibility
+   ======================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+:focus-visible {
+    outline: 3px solid #b79f6e;
+    outline-offset: 2px;
+}
+
+/* ========================================
+   Loading State
+   ======================================== */
+
+.cta-button:disabled,
+.cta-button.loading {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ========================================
+   Animation
+   ======================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+
+@media print {
+    .fixed-footer {
+        display: none !important;
+    }
+}
