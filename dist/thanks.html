@@ -155,6 +155,46 @@
             box-shadow: 0 8px 24px rgba(194, 44, 14, 0.4);
         }
 
+        .thanks-cta-line {
+            background: linear-gradient(135deg, #06C755 0%, #00B341 100%);
+            box-shadow: 0 6px 20px rgba(0, 179, 65, 0.25);
+            font-size: 24px;
+            padding: 20px 56px;
+            margin-bottom: 24px;
+        }
+
+        .thanks-cta-line:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 179, 65, 0.35);
+            background: linear-gradient(135deg, #07d860 0%, #00c449 100%);
+        }
+
+        .thanks-cta-secondary {
+            background: linear-gradient(135deg, #2d5a7b 0%, #1a3a52 100%);
+            font-size: 16px;
+            padding: 14px 40px;
+        }
+
+        .thanks-qr {
+            margin: 32px 0;
+            text-align: center;
+        }
+
+        .thanks-qr img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .thanks-qr-label {
+            font-size: 14px;
+            color: #777;
+            margin-top: 12px;
+        }
+
         .thanks-footer {
             margin-top: 48px;
             padding-top: 32px;
@@ -286,21 +326,33 @@
 <body data-gtm-id="GTM-XXXXXXX" data-fb-pixel-id="XXXXXXXXXX">
     <div class="thanks-container">
         <div class="thanks-icon">✨</div>
-        <h1 class="thanks-title">ご登録ありがとうございます！</h1>
+        <h1 class="thanks-title">登録完了！LINEで最速受け取り</h1>
         <p class="thanks-message">
-            メールアドレスの登録が完了しました。<br>
-            まもなく、第1話の動画をお送りします。
+            今すぐ下のボタン（またはQR）から公式LINEを追加してください。<br>
+            7話講座の視聴リンクを即時でお届けします。
         </p>
 
+        <a href="https://line.me/R/ti/p/@YOUR_LINE_ID"
+           class="thanks-cta thanks-cta-line"
+           target="_blank" rel="noopener"
+           data-event="CTAClick" data-location="thanks-line">
+            LINEで受け取る
+        </a>
+
+        <div class="thanks-qr">
+            <img src="images/line/qr.png" alt="LINE QRコード" width="200" height="200" loading="lazy">
+            <p class="thanks-qr-label">スマホでQRコードを読み取る</p>
+        </div>
+
         <div class="thanks-steps">
-            <h2 class="thanks-steps-title">次のステップ</h2>
+            <h2 class="thanks-steps-title">LINE登録後の流れ</h2>
 
             <div class="thanks-step">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <div class="step-title">メールをご確認ください</div>
+                    <div class="step-title">公式LINEを友だち追加</div>
                     <div class="step-description">
-                        数分以内に、ご登録いただいたメールアドレス宛に第1話の動画リンクをお送りします。
+                        上のボタンまたはQRコードから、公式LINEアカウントを友だち追加してください。
                     </div>
                 </div>
             </div>
@@ -308,9 +360,9 @@
             <div class="thanks-step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <div class="step-title">迷惑メールフォルダをチェック</div>
+                    <div class="step-title">すぐに第1話のリンクが届きます</div>
                     <div class="step-description">
-                        メールが届かない場合は、迷惑メールフォルダやプロモーションタブをご確認ください。
+                        友だち追加後、自動返信で第1話の動画視聴リンクが届きます。今すぐ視聴できます。
                     </div>
                 </div>
             </div>
@@ -318,24 +370,23 @@
             <div class="thanks-step">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <div class="step-title">動画を視聴して学習開始</div>
+                    <div class="step-title">7日間で恋愛を変える</div>
                     <div class="step-description">
-                        届いたメール内のリンクから、第1話の動画をご視聴ください。7日間で恋愛を変える旅が始まります。
+                        毎日1話ずつ、LINEで動画リンクをお届けします。7日間で本命彼女に選ばれる男へ。
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="thanks-note">
-            ※メールが届かない場合は、info@example.com までお問い合わせください。
+            ※ご登録いただいたメールアドレスにも動画リンクをお送りします。
         </div>
 
-        <a href="index.html" class="thanks-cta">トップページに戻る</a>
+        <a href="index.html" class="thanks-cta thanks-cta-secondary">トップページに戻る</a>
 
         <div class="thanks-footer">
-            <p class="thanks-footer-text">さらに情報をチェック</p>
+            <p class="thanks-footer-text">公式SNSもフォローして最新情報をチェック</p>
             <div class="thanks-social">
-                <a href="#" class="social-link">公式LINE</a>
                 <a href="#" class="social-link">公式Twitter</a>
                 <a href="#" class="social-link">公式Instagram</a>
             </div>
@@ -370,6 +421,30 @@
                 status: 'completed'
             });
         }
+
+        // Track LINE CTA clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            const lineCTA = document.querySelector('[data-event="CTAClick"]');
+            if (lineCTA) {
+                lineCTA.addEventListener('click', function() {
+                    const location = this.getAttribute('data-location');
+
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'CTAClick', {
+                            event_category: 'engagement',
+                            event_label: `cta_${location}`
+                        });
+                    }
+
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead', {
+                            content_name: 'LINE Registration',
+                            content_category: 'thanks_page'
+                        });
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>

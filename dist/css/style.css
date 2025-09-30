@@ -852,3 +852,82 @@ button {
         display: none !important;
     }
 }
+
+/* ========================================
+   Additional Styles for Updated Design
+   ======================================== */
+
+/* FV Hero Image */
+.hero-image {
+    width: 100%;
+    display: block;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Above Fold CTA Section */
+.above-fold-cta {
+    padding: 40px 0 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.above-fold-cta .hero-lead {
+    margin-bottom: 24px;
+}
+
+.above-fold-cta .cta-container {
+    margin: 0;
+}
+
+/* Lesson Visual Images */
+.lesson-visual {
+    margin-bottom: 20px;
+}
+
+.lesson-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Profile Image - Circle */
+.profile-image img {
+    border-radius: 50%;
+    display: block;
+}
+
+/* Thanks Page LINE CTA */
+.thanks-cta-line {
+    background: linear-gradient(135deg, #06C755 0%, #00B341 100%);
+    box-shadow: 0 6px 20px rgba(0, 179, 65, 0.25);
+}
+
+.thanks-cta-line:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 179, 65, 0.35);
+    background: linear-gradient(135deg, #07d860 0%, #00c449 100%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .above-fold-cta {
+        padding: 32px 0 16px;
+    }
+
+    .above-fold-cta .hero-lead-text {
+        font-size: 18px;
+    }
+
+    .above-fold-cta .hero-lead-text strong {
+        font-size: 22px;
+    }
+
+    .lesson-visual {
+        margin-bottom: 16px;
+    }
+}
